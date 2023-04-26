@@ -8,7 +8,7 @@ public class Player_Invasion : MonoBehaviour
     public GameObject Gun;
     public GameObject InvasionTrigger;
 
-    private Disparo shootScript;
+    private Disparo_Delay shootScript;
     private CharMovements moveScript;
 
     private bool PlayerDetected;
@@ -18,7 +18,7 @@ public class Player_Invasion : MonoBehaviour
     {
         x = true;
         InvasionTrigger = GameObject.Find("Invasion_Trigger");
-        shootScript = GetComponentInChildren<Disparo>();
+        shootScript = GetComponentInChildren<Disparo_Delay>();
         moveScript = GetComponent<CharMovements>();
     }
 

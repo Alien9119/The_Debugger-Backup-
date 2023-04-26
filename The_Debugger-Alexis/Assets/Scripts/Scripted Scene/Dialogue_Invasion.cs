@@ -19,9 +19,9 @@ public class Dialogue_Invasion : MonoBehaviour
     void Awake()
     {
         x = true;
-        
+
         seconds = new float[4] { 4, 3, 5, 2 };
-        velocity = new float[4] { 0.05f, 0.06f, 0.05f, 0.06f};
+        velocity = new float[4] { 0.05f, 0.06f, 0.05f, 0.06f };
         messages = new Queue<string>();
 
         messageText = transform.Find("Character_dialogue").GetComponent<TMP_Text>();
@@ -33,7 +33,7 @@ public class Dialogue_Invasion : MonoBehaviour
         PlayerDetected = InvasionTrigger.GetComponent<Detector>().playerDetected;
         if (PlayerDetected)
         {
-            if(x)
+            if (x)
             {
                 StartCoroutine(EventsTimeline());
             }
@@ -45,7 +45,7 @@ public class Dialogue_Invasion : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         messages.Enqueue("Emergencia. Los bugs estan entrando a nuestro sistema");
-        messages.Enqueue("Ellos? Wow, son bugs literales");
+        messages.Enqueue("Pero acabo de llegar!");
         messages.Enqueue("Vas a tener que enfrentarlos para evitar que corrompan el sistema");
         messages.Enqueue("Muy bien, veamos lo que tienen!");
 

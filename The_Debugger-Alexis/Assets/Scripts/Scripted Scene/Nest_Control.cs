@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Nest_Control : MonoBehaviour
 {
+    public Enemy_Spawning spawnScript;
     public GameObject InvasionTrigger;
     public GameObject Child;
 
@@ -41,10 +42,16 @@ public class Nest_Control : MonoBehaviour
                 StartCoroutine(Delay());
             }
             x = false;
-            if (escala.x < max)
+            if (escala.x < max && !spawnScript.spawnerDone)
             {
                 escala.x += 0.005f;
                 escala.y += 0.005f;
+                gameObject.transform.localScale = escala;
+            }
+            if (escala.x > 0 && spawnScript.spawnerDone)
+            {
+                escala.x -= 0.007f;
+                escala.y -= 0.007f;
                 gameObject.transform.localScale = escala;
             }
         }
