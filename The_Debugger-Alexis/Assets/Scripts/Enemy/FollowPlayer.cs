@@ -59,4 +59,19 @@ public class FollowPlayer : MonoBehaviour
             anim.SetBool("Moving", false);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            StartCoroutine(StopMoving());
+        }
+    }
+
+    IEnumerator StopMoving()
+    {
+        persiguiendo = false; // Stop moving
+        yield return new WaitForSeconds(0.5f);
+        persiguiendo = true; // Start moving again
+    }
 }
