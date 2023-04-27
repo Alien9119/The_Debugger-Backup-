@@ -325,6 +325,7 @@ GameObject:
   - component: {fileID: 110792229}
   - component: {fileID: 110792230}
   - component: {fileID: 110792231}
+  - component: {fileID: 110792232}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -387,6 +388,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnScript: {fileID: 639415642}
+--- !u!114 &110792232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110792227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 835c1442927e3f94399f9abf5888ec38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PortalTrigger: {fileID: 1496068807}
 --- !u!1001 &111732293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -590,6 +604,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3293521394219387970, guid: 71c1bf17e4b9249498706e0be2a83cde, type: 3}
+      propertyPath: canShoot
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4092528288639227048, guid: 71c1bf17e4b9249498706e0be2a83cde, type: 3}
       propertyPath: camara
       value: 
@@ -606,6 +624,14 @@ PrefabInstance:
       propertyPath: barraVida
       value: 
       objectReference: {fileID: 723998456}
+    - target: {fileID: 9033259587664960230, guid: 71c1bf17e4b9249498706e0be2a83cde, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9033259587664960230, guid: 71c1bf17e4b9249498706e0be2a83cde, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9033259587664960230, guid: 71c1bf17e4b9249498706e0be2a83cde, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -756,7 +782,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingOrder: -5
   m_Sprite: {fileID: -1986540408, guid: 5b503192936381944b317738acc75fdf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11381,6 +11407,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &650388205 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3694693356436220489, guid: 71c1bf17e4b9249498706e0be2a83cde, type: 3}
+  m_PrefabInstance: {fileID: 129467024}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87265ddb74507fe4ca1bffb2420e35f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &655898069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12076,6 +12113,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnScript: {fileID: 639415642}
+  DialoguePanelPlayer: {fileID: 1933695312}
+  DialoguePanelAI: {fileID: 916131710}
+--- !u!114 &764664796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764664774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a2f4afff1e81f547b5665ab78a0de8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PortalTrigger: {fileID: 1496068807}
   DialoguePanelPlayer: {fileID: 1933695312}
   DialoguePanelAI: {fileID: 916131710}
 --- !u!1001 &776417056
@@ -14663,7 +14715,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingOrder: -4
   m_Sprite: {fileID: 1821482391, guid: 5b503192936381944b317738acc75fdf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -15953,6 +16005,78 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1496068807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1496068810}
+  - component: {fileID: 1496068809}
+  - component: {fileID: 1496068808}
+  m_Layer: 0
+  m_Name: Portal_Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1496068808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496068807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96d872cf8f9c74d4ab04e13b05622cad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerDetected: 0
+--- !u!61 &1496068809
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496068807}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.9777145, y: -0.021398187}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.955429, y: 1.0427964}
+  m_EdgeRadius: 0
+--- !u!4 &1496068810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496068807}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 35, y: 0.6, z: 0.037340306}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1519884481
 GameObject:
   m_ObjectHideFlags: 0
@@ -16740,7 +16864,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -6
+  m_SortingOrder: -7
   m_Sprite: {fileID: 1982938373, guid: 5b503192936381944b317738acc75fdf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -16987,6 +17111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gun: {fileID: 1674763181}
+  effectScript: {fileID: 650388205}
 --- !u!114 &1649976731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17001,6 +17126,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Gun: {fileID: 1674763181}
   InvasionTrigger: {fileID: 1337600543}
+  effectScript: {fileID: 650388205}
+--- !u!114 &1649976738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106533807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bfb55325af434b46b6dacee903c8dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Gun: {fileID: 1674763181}
+  PortalTrigger: {fileID: 1496068807}
+  effectScript: {fileID: 650388205}
 --- !u!4 &1651073882 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7600898632825871887, guid: 64be63aadf393ae49a0befcccc0e994b, type: 3}
@@ -17887,7 +18028,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -5
+  m_SortingOrder: -6
   m_Sprite: {fileID: -1986540408, guid: 5b503192936381944b317738acc75fdf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

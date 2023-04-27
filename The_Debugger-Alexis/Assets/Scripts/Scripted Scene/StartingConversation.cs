@@ -8,6 +8,7 @@ public class StartingConversation : MonoBehaviour
 
     private Disparo_Delay shootScript;
     private CharMovements moveScript;
+    public ActivateFireEffect effectScript;
     private SpriteRenderer SpriteBody;
     private SpriteRenderer SpriteGun;
 
@@ -26,6 +27,7 @@ public class StartingConversation : MonoBehaviour
         SpriteGun.enabled = false;
         moveScript.canMove = false;
         shootScript.canShoot = false;
+        effectScript.canShoot = false;
         yield return new WaitForSeconds(47f);
         SpriteBody.enabled = true;
         yield return new WaitForSeconds(1f);
@@ -33,5 +35,6 @@ public class StartingConversation : MonoBehaviour
         yield return new WaitForSeconds(1f);
         moveScript.canMove = true;
         shootScript.canShoot = true;
+        effectScript.canShoot = true;
     }
 }
