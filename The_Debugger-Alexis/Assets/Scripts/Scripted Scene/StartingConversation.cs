@@ -6,14 +6,14 @@ public class StartingConversation : MonoBehaviour
 {
     public GameObject Gun;
 
-    private Disparo shootScript;
+    private Disparo_Delay shootScript;
     private CharMovements moveScript;
     private SpriteRenderer SpriteBody;
     private SpriteRenderer SpriteGun;
 
     void Start()
     {
-        shootScript = GetComponentInChildren<Disparo>();
+        shootScript = GetComponentInChildren<Disparo_Delay>();
         moveScript = GetComponent<CharMovements>();
         SpriteBody = GetComponent<SpriteRenderer>();
         SpriteGun = Gun.GetComponentInChildren<SpriteRenderer>();

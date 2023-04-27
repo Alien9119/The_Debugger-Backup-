@@ -7,6 +7,9 @@ public class Bala : MonoBehaviour
     [SerializeField] private float velocidad;
     [SerializeField] private float daño;
 
+    [SerializeField] private Transform bulletPosition;
+    [SerializeField] private GameObject hitEffect;
+
     private SpriteRenderer spriteRenderer;
 
     void Start()
@@ -29,6 +32,12 @@ public class Bala : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             other.GetComponent<Enemy>().TomarDaño(daño);
+            Instantiate(hitEffect, bulletPosition.position, bulletPosition.rotation);
+            Destroy(gameObject);
+        }
+        else if(other.CompareTag("Collider"))
+        {
+            Instantiate(hitEffect, bulletPosition.position, bulletPosition.rotation);
             Destroy(gameObject);
         }
     }
