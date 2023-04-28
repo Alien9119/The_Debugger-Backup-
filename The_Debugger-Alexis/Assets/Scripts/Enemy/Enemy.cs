@@ -31,10 +31,10 @@ public class Enemy : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        print("Colisión del enemigo");
+        //print("Colisión del enemigo");
         if (other.CompareTag("Player"))
         {
-            print("Colisión con el jugador");
+            //print("Colisión con el jugador");
             other.GetComponent<Jugador>().TomarDaño2(daño2);
             //Hacer un timer para dar el daño dependiendo del collider
             print("El jugador ha recibido daño");

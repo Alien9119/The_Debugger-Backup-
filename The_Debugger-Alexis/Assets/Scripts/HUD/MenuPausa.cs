@@ -29,7 +29,7 @@ public class MenuPausa : MonoBehaviour
     {
         shootScript.canShoot = false;
         juegoPausado = true;
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
         botonPausa.SetActive(false);
         menuPausa.SetActive(true);
     }
@@ -45,14 +45,15 @@ public class MenuPausa : MonoBehaviour
 
     public void Reiniciar()
     {
-        juegoPausado = false;
+        juegoPausado = true;
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Cerrar()
     {
-        Debug.Log("Cerrando juego");
-        Application.Quit();
+        juegoPausado = true;
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MenuScene");
     }
 }

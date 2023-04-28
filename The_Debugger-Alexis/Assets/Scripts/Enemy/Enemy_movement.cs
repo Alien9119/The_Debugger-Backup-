@@ -6,12 +6,12 @@ public class Enemy_movement : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
     //private Rigidbody2D rigidbody;
-    private Enemy_Awareness enemy_Awareness;
+    //private Enemy_Awareness enemy_Awareness;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        enemy_Awareness = GetComponent<Enemy_Awareness>();
+        //enemy_Awareness = GetComponent<Enemy_Awareness>();
     }
 
     private void Update()

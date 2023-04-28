@@ -31,6 +31,7 @@ public class Jugador : MonoBehaviour
     {
         vida -= daño2;
         barraVida.CambiarVidaActual(vida);
+        anim.SetTrigger("Hurt");
         if (vida <= 0)
         {
             mov.canMove = false;
