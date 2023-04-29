@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MenuPausa : MonoBehaviour
 {
     public Disparo_Delay shootScript;
+
     [SerializeField] private GameObject botonPausa;
     [SerializeField] private GameObject menuPausa;
 
@@ -29,7 +30,7 @@ public class MenuPausa : MonoBehaviour
     {
         shootScript.canShoot = false;
         juegoPausado = true;
-        Time.timeScale = 1f;
+        Time.timeScale = 0f;
         botonPausa.SetActive(false);
         menuPausa.SetActive(true);
     }
@@ -45,14 +46,14 @@ public class MenuPausa : MonoBehaviour
 
     public void Reiniciar()
     {
-        juegoPausado = true;
+        juegoPausado = false;
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Cerrar()
     {
-        juegoPausado = true;
+        juegoPausado = false;
         Time.timeScale = 1f;
         SceneManager.LoadScene("MenuScene");
     }

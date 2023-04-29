@@ -8,6 +8,8 @@ TagManager:
   - Gun
   - ChildCollider
   - Collider
+  - RangedEnemy
+  - HeavyEnemy
   layers:
   - Default
   - TransparentFX

@@ -197,6 +197,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9033259588908777380}
     m_Modifications:
+    - target: {fileID: 2816772114410244499, guid: fa4d567a022d6814ebdbb5f9037fa48e, type: 3}
+      propertyPath: canShoot
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8646711922379972404, guid: fa4d567a022d6814ebdbb5f9037fa48e, type: 3}
       propertyPath: m_Name
       value: Revolver
@@ -211,7 +215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646711922379972405, guid: fa4d567a022d6814ebdbb5f9037fa48e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.023
+      value: -0.028
       objectReference: {fileID: 0}
     - target: {fileID: 8646711922379972405, guid: fa4d567a022d6814ebdbb5f9037fa48e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -243,6 +247,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646711922379972405, guid: fa4d567a022d6814ebdbb5f9037fa48e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646711922379972407, guid: fa4d567a022d6814ebdbb5f9037fa48e, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646711922379972407, guid: fa4d567a022d6814ebdbb5f9037fa48e, type: 3}
+      propertyPath: m_FlipY
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

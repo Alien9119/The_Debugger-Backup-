@@ -12,24 +12,21 @@ public class CambiarRotacion : MonoBehaviour
     [SerializeField] private float anguloInicial;
     public float anguloGrados;
 
-    /**
     private Transform barrel;
     private Transform effect;
 
-    int x = 0;
     int y = 0;
-    */
 
     void Start()
     {
         SpriteRenderer = GetComponent<SpriteRenderer>();
-        /**
+        
         Transform childBarrel = transform.Find("ControladorDisparo");
         Transform childEffect = transform.Find("Gun_fire");
 
         barrel = childBarrel.GetComponent<Transform>();
         effect = childEffect.GetComponent<Transform>();
-        */
+        
     }
 
     private void Update()
@@ -46,25 +43,32 @@ public class CambiarRotacion : MonoBehaviour
         if (anguloGrados < 80 && anguloGrados > -80)
         {
             SpriteRenderer.flipY = false;
-            /**
-            if(x == 0)
+            if(y == 1)
             {
-                effect.position = new Vector3(effect.position.x, (float)(effect.position.y), effect.position.z);
-                barrel.position = new Vector3(barrel.position.x, (float)(barrel.position.y), barrel.position.z);
-                x = 1;
+                AdjustFireUp();
             }
-            */
         }
         else if (anguloGrados > 80 || anguloGrados < -80)
         {
             SpriteRenderer.flipY = true;
-            /**if(y == 0)
+            if(y == 0)
             {
-                effect.position = new Vector3(effect.position.x, (float)(effect.position.y + 0.05), effect.position.z);
-                barrel.position = new Vector3(barrel.position.x, (float)(barrel.position.y + 0.05), barrel.position.z);
-                y = 1;
+                AdjustFireDown();
             }
-            */
         }
+    }
+
+    private void AdjustFireDown()
+    {
+        effect.localPosition = new Vector3(effect.localPosition.x, -0.02f, effect.localPosition.z);
+        barrel.localPosition = new Vector3(barrel.localPosition.x, -0.02f, barrel.localPosition.z);
+        y = 1;
+    }
+
+    private void AdjustFireUp()
+    {
+        effect.localPosition = new Vector3(effect.localPosition.x, 0.02f, effect.localPosition.z);
+        barrel.localPosition = new Vector3(barrel.localPosition.x, 0.02f, barrel.localPosition.z);
+        y = 0;
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RangedEnemy : MonoBehaviour
+public class RangedEnemy_Heavy : MonoBehaviour
 {
     [SerializeField] public float vida;
     private Enemy_Spawning enemySpawning;
@@ -24,7 +24,7 @@ public class RangedEnemy : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
-    
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -45,17 +45,21 @@ public class RangedEnemy : MonoBehaviour
         if (Vector2.Distance(transform.position, objetivo.position) <= followPlayerRange && Vector2.Distance(transform.position, objetivo.position) > attackRange)
         {
             inRange = true;
+            anim.SetBool("Moviendo", true);
+            timeBtwnShots -= Time.deltaTime;
         }
         else
         {
             inRange = false;
+            anim.SetBool("Moviendo", false);
         }
 
         if (Vector2.Distance(transform.position, objetivo.position) <= attackRange)
         {
             if (timeBtwnShots <= 0)
             {
-                Instantiate(enemyProjectile, shotPoint.position, shotPoint.transform.rotation);
+                anim.SetTrigger("Attack");
+                StartCoroutine(AttackDelay());
                 timeBtwnShots = startTimeBtwnShots;
             }
             else
@@ -104,10 +108,21 @@ public class RangedEnemy : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 
+    private void Attack()
+    {
+        Instantiate(enemyProjectile, shotPoint.position, shotPoint.transform.rotation);
+    }
+
     IEnumerator DeathDelay()
     {
         anim.SetTrigger("Muerte");
         yield return new WaitForSeconds(0.7f);
         Destroy(gameObject);
+    }
+
+    IEnumerator AttackDelay()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Attack();
     }
 }

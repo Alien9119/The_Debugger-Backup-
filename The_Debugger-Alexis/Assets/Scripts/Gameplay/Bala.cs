@@ -35,6 +35,18 @@ public class Bala : MonoBehaviour
             Instantiate(hitEffect, bulletPosition.position, bulletPosition.rotation);
             Destroy(gameObject);
         }
+        else if (other.CompareTag("RangedEnemy"))
+        {
+            other.GetComponent<RangedEnemy>().TomarDaño(daño);
+            Instantiate(hitEffect, bulletPosition.position, bulletPosition.rotation);
+            Destroy(gameObject);
+        }
+        else if (other.CompareTag("HeavyEnemy"))
+        {
+            other.GetComponent<RangedEnemy_Heavy>().TomarDaño(daño);
+            Instantiate(hitEffect, bulletPosition.position, bulletPosition.rotation);
+            Destroy(gameObject);
+        }
         else if(other.CompareTag("Collider"))
         {
             Instantiate(hitEffect, bulletPosition.position, bulletPosition.rotation);

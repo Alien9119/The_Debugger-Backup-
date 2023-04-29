@@ -1,53 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6309261558419781230
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6309261558419781231}
-  - component: {fileID: 6309261558419781232}
-  m_Layer: 0
-  m_Name: colisionFisica2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6309261558419781231
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6309261558419781230}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.00382879}
-  m_LocalScale: {x: 0.20607205, y: 0.20607205, z: 0.20607205}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6309261559230884450}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &6309261558419781232
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6309261558419781230}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.032271147, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.404
 --- !u!1 &6309261559230884511
 GameObject:
   m_ObjectHideFlags: 0
@@ -83,8 +35,7 @@ Transform:
   m_LocalPosition: {x: 25.99, y: -1.56, z: 0}
   m_LocalScale: {x: 2.4857097, y: 2.4857097, z: 2.4857097}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6309261558419781231}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
@@ -209,7 +160,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55726cdf87a8f8c4a98b877332971b28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 50
   "da\xF1o2": 5
 --- !u!114 &8056585549416702691
 MonoBehaviour:
