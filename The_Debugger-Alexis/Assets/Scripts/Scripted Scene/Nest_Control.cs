@@ -21,7 +21,7 @@ public class Nest_Control : MonoBehaviour
     void Start()
     {
         x = true;
-        max = 1;
+        max = 0.8f;
         Child = transform.Find("Nest1").gameObject;
         InvasionTrigger = GameObject.Find("Invasion_Trigger");
         SpriteR = GetComponent<SpriteRenderer>();
@@ -60,6 +60,6 @@ public class Nest_Control : MonoBehaviour
     IEnumerator Delay()
     {
         yield return new WaitForSeconds(18f);
-        max = 2.5f;
+        max = 1.2f;
     }
 }

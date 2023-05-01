@@ -31,7 +31,7 @@ public class Bala : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            other.GetComponent<Enemy>().TomarDaño(daño);
+            other.GetComponent<Enemy_2>().TomarDaño(daño);
             Instantiate(hitEffect, bulletPosition.position, bulletPosition.rotation);
             Destroy(gameObject);
         }
@@ -44,6 +44,12 @@ public class Bala : MonoBehaviour
         else if (other.CompareTag("HeavyEnemy"))
         {
             other.GetComponent<RangedEnemy_Heavy>().TomarDaño(daño);
+            Instantiate(hitEffect, bulletPosition.position, bulletPosition.rotation);
+            Destroy(gameObject);
+        }
+        else if (other.CompareTag("HeathEnemy"))
+        {
+            other.GetComponent<Health_Spider>().TomarDaño(daño);
             Instantiate(hitEffect, bulletPosition.position, bulletPosition.rotation);
             Destroy(gameObject);
         }

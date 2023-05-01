@@ -6,13 +6,13 @@ public class Enemy_HealthBar : MonoBehaviour
 {
     public GameObject mainEnemy;
 
-    private Enemy scriptEnemy;
+    private Enemy_2 scriptEnemy;
     Vector3 localScale;
 
     void Start()
     {
         localScale = transform.localScale;
-        scriptEnemy = mainEnemy.GetComponent<Enemy>();
+        scriptEnemy = mainEnemy.GetComponent<Enemy_2>();
     }
 
     void Update()

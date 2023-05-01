@@ -10,6 +10,8 @@ TagManager:
   - Collider
   - RangedEnemy
   - HeavyEnemy
+  - HeathEnemy
+  - Matriarch
   layers:
   - Default
   - TransparentFX

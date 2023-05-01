@@ -14,7 +14,7 @@ public class Disparo_Delay : MonoBehaviour
 
     void Start()
     {
-        canShoot = false;
+        //canShoot = false;
     }
 
     private void Update()

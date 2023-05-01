@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8621745236849102514}
   - component: {fileID: 7895607580529428577}
   - component: {fileID: 6650328307564645962}
+  - component: {fileID: 5711459884187272008}
   m_Layer: 0
   m_Name: HealthBar (2)
   m_TagString: Untagged
@@ -96,6 +97,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be91678b3c8d91c4aab0b3522b3bb0cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainEnemy: {fileID: 3024502445208085167}
+--- !u!114 &5711459884187272008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329324010613095162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d6d27f0c9eda04d970f5bfd381689d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mainEnemy: {fileID: 3024502445208085167}
@@ -225,9 +239,9 @@ GameObject:
   - component: {fileID: 5972803410086620999}
   - component: {fileID: 3120127770828243273}
   - component: {fileID: 5570574508891940161}
-  - component: {fileID: 694227362500573015}
   - component: {fileID: 7622697060438248787}
   - component: {fileID: 7622697060438248786}
+  - component: {fileID: 4463877625598236520}
   m_Layer: 0
   m_Name: Robo_Hornet_2.0
   m_TagString: RangedEnemy
@@ -324,26 +338,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &694227362500573015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3024502445208085167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9571404400e1ea14d996536f5a1f4005, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vida: 50
-  moveSpeed: 3
-  shotPoint: {fileID: 1405030929128241402}
-  gun: {fileID: 5014741327833691129}
-  enemyProjectile: {fileID: 3654423896047297221, guid: 599eede0688ff044993f0222f312f110, type: 3}
-  followPlayerRange: 7
-  attackRange: 5
-  startTimeBtwnShots: 1
 --- !u!50 &7622697060438248787
 Rigidbody2D:
   serializedVersion: 4
@@ -381,6 +375,26 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.043509204}
   m_Size: {x: 0.24999999, y: 0.26298156}
   m_Direction: 0
+--- !u!114 &4463877625598236520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3024502445208085167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3d0eddf80258d4ea26f2e4f4fe97ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 50
+  moveSpeed: 3
+  shotPoint: {fileID: 1405030929128241402}
+  gun: {fileID: 5014741327833691129}
+  enemyProjectile: {fileID: 3654423896047297221, guid: 599eede0688ff044993f0222f312f110, type: 3}
+  followPlayerRange: 30
+  attackRange: 5
+  startTimeBtwnShots: 1
 --- !u!1 &3973049835487600182
 GameObject:
   m_ObjectHideFlags: 0
