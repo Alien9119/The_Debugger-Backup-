@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class BlackFade : MonoBehaviour
 {
+    [SerializeField] public float TimeDisable;
     private Image square;
     
     void Start()
@@ -15,7 +16,7 @@ public class BlackFade : MonoBehaviour
 
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(TimeDisable);
         square.enabled = false;
     }
 }

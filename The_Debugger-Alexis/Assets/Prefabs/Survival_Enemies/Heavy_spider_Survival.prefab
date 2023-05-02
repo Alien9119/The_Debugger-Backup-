@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 100
-  moveSpeed: 0.8
+  moveSpeed: 1
   shotPoint: {fileID: 350551879114894160}
   gun: {fileID: 350551879918125119}
   enemyProjectile: {fileID: 3705086013727862598, guid: d4ebc2c8777b7924dbc22d3695d83f7c, type: 3}

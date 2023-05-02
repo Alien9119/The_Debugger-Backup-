@@ -7,6 +7,8 @@ public class Disparo_Delay : MonoBehaviour
     [SerializeField] private Transform controladorDisparo;
     [SerializeField] private GameObject bala;
 
+    private AudioSource shootFire;
+
     private float fireRate = 0.4f;
     private float nextFire = 0f;
 
@@ -14,6 +16,7 @@ public class Disparo_Delay : MonoBehaviour
 
     void Start()
     {
+        shootFire = GetComponent<AudioSource>();
         //canShoot = false;
     }
 
@@ -26,6 +29,7 @@ public class Disparo_Delay : MonoBehaviour
                 nextFire = Time.time + fireRate;
                 //Hace la acción del disparo
                 Disparar();
+                shootFire.Play();
             }
         }
     }

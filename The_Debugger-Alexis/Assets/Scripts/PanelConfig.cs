@@ -8,6 +8,7 @@ public class PanelConfig : MonoBehaviour
     public GameObject panel_config;
     public GameObject boton1;
     public GameObject boton2;
+    public GameObject boton3;
     public GameObject titulo;
     //Estatus del panel de configuración
     private bool configActiva = false;
@@ -25,6 +26,7 @@ public class PanelConfig : MonoBehaviour
         panel_config.SetActive(configActiva);
         boton1.SetActive(objmenu);
         boton2.SetActive(objmenu);
+        boton3.SetActive(objmenu);
         titulo.SetActive(objmenu);
         objmenu = false;
     }
