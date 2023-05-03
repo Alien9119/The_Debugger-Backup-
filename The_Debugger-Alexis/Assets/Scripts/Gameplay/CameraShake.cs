@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+
 public class CameraShake : MonoBehaviour
 {
     private Vector3 originPosition;
@@ -40,3 +42,5 @@ public class CameraShake : MonoBehaviour
         shake_decay = 0.002;
     }
 }
+
+**/

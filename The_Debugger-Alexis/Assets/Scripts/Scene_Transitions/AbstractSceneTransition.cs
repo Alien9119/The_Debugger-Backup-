@@ -2,6 +2,8 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
+/**
+
 public class AbstractSceneTransition : ScriptableObject
 {
     public AnimationCurve LerpCurve;
@@ -19,3 +21,5 @@ public class AbstractSceneTransition : ScriptableObject
         return child.AddComponent<Image>();
     }
 }
+
+**/
