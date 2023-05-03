@@ -30,7 +30,7 @@ public class Dialogue : MonoBehaviour
         yield return new WaitForSeconds(4f);
         messages.Enqueue("Uh? Donde estoy?");
         messages.Enqueue("Bienvenido al Proyecto Debugger");
-        messages.Enqueue("Soy la Inteligencia Artificial DI designada a ayudarte");
+        messages.Enqueue("Soy la Inteligencia Artificial DI asignada a ayudarte");
         messages.Enqueue("Has entrado a un mundo digital dentro de la web");
         messages.Enqueue("Tu trabajo es buscar y destruir a los bugs que estan interfiriendo con tu sistema");
         messages.Enqueue("Que?! Espera un momento, yo nunca acepte a hacer esto");
