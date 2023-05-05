@@ -39,6 +39,7 @@ public class Jugador : MonoBehaviour
             spriteGun.enabled = false;
             anim.SetTrigger("ded");
             isDead = true;
+            TimerController.instance.EndTimer();
         }
     }
 

@@ -86,6 +86,7 @@ public class Robo_Hornet_Tier1 : MonoBehaviour
             {
                 enemySpawning.spawnerDone = true;
             }
+            ScoreCounter.instance.UpdateScoreHornet();
         }
     }
 

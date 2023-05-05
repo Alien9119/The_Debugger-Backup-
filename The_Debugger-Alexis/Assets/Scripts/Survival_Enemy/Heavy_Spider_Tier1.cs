@@ -90,6 +90,7 @@ public class Heavy_Spider_Tier1 : MonoBehaviour
             {
                 enemySpawning.spawnerDone = true;
             }
+            ScoreCounter.instance.UpdateScoreHeavySpider();
         }
     }
 

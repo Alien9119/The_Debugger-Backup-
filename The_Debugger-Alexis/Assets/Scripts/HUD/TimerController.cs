@@ -14,6 +14,8 @@ public class TimerController : MonoBehaviour
     private TimeSpan timePlaying;
     private bool timerGoing;
 
+    public TimeSpan finalTime;
+
     private float elapsedTime;
 
     private void Awake()
@@ -36,9 +38,10 @@ public class TimerController : MonoBehaviour
         StartCoroutine(UpdateTimer());
     }
 
-    public void EndTimer()
+    internal void EndTimer()
     {
         timerGoing = false;
+        finalTime = timePlaying;
     }
 
     private IEnumerator UpdateTimer()

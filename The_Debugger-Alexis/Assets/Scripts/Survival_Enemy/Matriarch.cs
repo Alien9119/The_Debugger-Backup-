@@ -89,6 +89,7 @@ public class Matriarch : MonoBehaviour
             {
                 enemySpawning.spawnerDone = true;
             }
+            ScoreCounter.instance.UpdateScoreMatriarch();
         }
     }
 

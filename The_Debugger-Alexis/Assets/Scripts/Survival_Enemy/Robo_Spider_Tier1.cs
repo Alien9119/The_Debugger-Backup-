@@ -89,6 +89,7 @@ public class Robo_Spider_Tier1 : MonoBehaviour
             {
                 spawnScript.spawnerDone = true;
             }
+            ScoreCounter.instance.UpdateScoreNormalSpider();
         }
     }
 

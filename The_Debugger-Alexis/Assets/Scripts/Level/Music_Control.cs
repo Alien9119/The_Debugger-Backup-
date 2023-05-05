@@ -18,10 +18,10 @@ public class Music_Control : MonoBehaviour
     {
         yield return new WaitForSeconds(8f);
         Track1.Play();
-        yield return new WaitForSeconds(82f);
+        yield return new WaitForSeconds(164f);
         Track1.Stop();
         Track2.Play();
-        yield return new WaitForSeconds(224f);
+        yield return new WaitForSeconds(112f);
         Track2.Stop();
         Track3.Play();
         //yield return new WaitForSeconds(112f);
