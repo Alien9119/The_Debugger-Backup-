@@ -347,7 +347,7 @@ MonoBehaviour:
   shotPoint: {fileID: 6236155046584442519}
   gun: {fileID: 6236155046775671597}
   enemyProjectile: {fileID: 7321014163685131572, guid: ccf7a5a2bfa8ef34fbe60662a74194c2, type: 3}
-  followPlayerRange: 5
+  followPlayerRange: 10
   attackRange: 0.4
   startTimeBtwnShots: 1
 --- !u!1 &6236155046584442536
