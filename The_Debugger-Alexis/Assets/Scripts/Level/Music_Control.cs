@@ -6,16 +6,26 @@ public class Music_Control : MonoBehaviour
 {
     public AudioSource Track1;
     public AudioSource Track2;
+    public AudioSource Track3;
+    //public AudioSource Track4;
 
     void Start()
     {
-        StartCoroutine(Track1Duration());
+        StartCoroutine(TracksDuration());
     }
 
-    IEnumerator Track1Duration()
+    IEnumerator TracksDuration()
     {
-        yield return new WaitForSeconds(180);
+        yield return new WaitForSeconds(8f);
+        Track1.Play();
+        yield return new WaitForSeconds(82f);
         Track1.Stop();
         Track2.Play();
+        yield return new WaitForSeconds(224f);
+        Track2.Stop();
+        Track3.Play();
+        //yield return new WaitForSeconds(112f);
+        //Track4.Play();
+        //Track3.Stop();
     }
 }
